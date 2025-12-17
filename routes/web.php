@@ -8,6 +8,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/app' ,  function(){
+    return view('usuario.index');
+});
 
 
 
@@ -18,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('/hola', function(){
     $nombre="Andrea Leyton";
-    return "Hola mi amoooor {$nombre}";
+    return "Hola {$nombre}";
 });
 
 // Parametros en las rutas
