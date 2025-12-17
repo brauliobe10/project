@@ -10,7 +10,7 @@
     <meta name="author" content="KodeWAVE" />
     <meta
       name="description"
-      content="AdminLTE is a Free Bootstrap 5 Admin Dashboard, 30 example pages using Vanilla JS."
+      content="Sistema creado por KodeWAVE."
     />
     <meta
       name="keywords"
