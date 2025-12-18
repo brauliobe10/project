@@ -25,50 +25,60 @@
                                     </div>
                                 </div>
                             </form>
-                        </div class="table-responsive mt-3">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th style="width: 100px">Opciones</th>
-                                    <th style="width: 20px">ID</th>
-                                    <th>Nombre</th>
-                                    <th>Email</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        <a href="#" class="btn btn-warning btn-sm"><i class="bi bi-pencil-fill"></i></a>&nbsp;
-                                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal-eliminar-01"><i class="bi bi-trash-fill"></i></button>
-                                    </td>
-                                    <td>01</td>
-                                    <td>
-                                        Braulio Bellodas
-                                    </td>
-                                    <td>nuhkawpipo@gmail.com</td>
-                                </tr>
-                                @include('usuario.delete')
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- /.card-body -->
-                    <div class="card-footer clearfix">
-                        <ul class="pagination pagination-sm m-0 float-end">
-                            <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                        </ul>
+                            </div">
+                            <div class="table-responsive mt-3"></div>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 100px">Opciones</th>
+                                        <th style="width: 20px">ID</th>
+                                        <th>Nombre</th>
+                                        <th>Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="align-middle">
+                                        <td>
+                                            <a href="#" class="btn btn-warning btn-sm"><i
+                                                    class="bi bi-pencil-fill"></i></a>&nbsp;
+                                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#modal-eliminar-01"><i
+                                                    class="bi bi-trash-fill"></i></button>
+                                        </td>
+                                        <td>01</td>
+                                        <td>
+                                            Braulio Bellodas
+                                        </td>
+                                        <td>nuhkawpipo@gmail.com</td>
+                                    </tr>
+                                    @include('usuario.delete')
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer clearfix">
+                            <ul class="pagination pagination-sm m-0 float-end">
+                                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- /.col -->
+                <!-- /.col -->
 
-            <!-- /.col -->
+                <!-- /.col -->
+            </div>
+            <!--end::Row-->
         </div>
-        <!--end::Row-->
+        <!--end::Container-->
     </div>
-    <!--end::Container-->
-</div>
-@endsection
+    @endsection
+    @push('scripts')
+    <script>
+        document.getElementById('menuSeguridad').classList.add('menu-open');
+        document.getElementById('itemUsuario').classList.add('activo');
+    </script>
+    @endpush
