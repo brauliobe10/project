@@ -1,4 +1,4 @@
-<div class="modal fade" id="modal-eliminar-01" tabindex="-1" role="dialog" aria-labelledby="ejemplñoModalLabel">
+<div class="modal fade" id="modal-eliminar-01" tabindex="-1" role="dialog" aria-labelledby="ejemploModalLabel">
     <div class="modal-dialog">
         <div class="modal-content bg-white">
             <form action="#" method="get">

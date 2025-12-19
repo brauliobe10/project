@@ -34,24 +34,32 @@
                                         <th style="width: 20px">ID</th>
                                         <th>Nombre</th>
                                         <th>Email</th>
+                                        <th>Activo</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="align-middle">
-                                        <td>
-                                            <a href="#" class="btn btn-warning btn-sm"><i
-                                                    class="bi bi-pencil-fill"></i></a>&nbsp;
-                                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                                data-bs-target="#modal-eliminar-01"><i
-                                                    class="bi bi-trash-fill"></i></button>
-                                        </td>
-                                        <td>01</td>
-                                        <td>
-                                            Braulio Bellodas
-                                        </td>
-                                        <td>nuhkawpipo@gmail.com</td>
-                                    </tr>
-                                    @include('usuario.delete')
+                                    @if(count($registros)<=0) 
+                                        <tr>
+                                            <td colspan="5">No hay registros que coincidan con la busqueda</td>
+                                        </tr>
+                                        @else
+                                            @foreach($registros as $reg)
+                                                <tr class="align-middle">
+                                                    <td>
+                                                        <a href="#" class="btn btn-warning btn-sm"><i
+                                                                class="bi bi-pencil-fill"></i></a>&nbsp;
+                                                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                                            data-bs-target="#modal-eliminar-01"><i
+                                                                class="bi bi-trash-fill"></i></button>
+                                                    </td>
+                                                    <td>{{$reg->id}}</td>
+                                                    <td>{{$reg->name}}</td>
+                                                    <td>{{$reg->email}}</td>
+                                                    <td>{{$reg->activo}}</td>
+                                                </tr>
+                                                @include('usuario.delete')
+                                            @endforeach()
+                                        @endif
                                 </tbody>
                             </table>
                         </div>
@@ -78,7 +86,7 @@
     @endsection
     @push('scripts')
     <script>
-        document.getElementById('menuSeguridad').classList.add('menu-open');
-        document.getElementById('itemUsuario').classList.add('activo');
+    document.getElementById('menuSeguridad').classList.add('menu-open');
+    document.getElementById('itemUsuario').classList.add('activo');
     </script>
     @endpush

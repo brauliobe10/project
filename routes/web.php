@@ -2,19 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\EntradaController;
+use App\Http\Controllers\UserControlñler;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/app' ,  function(){
-    return view('usuario.index');
-});
-
-Route::get('/action' , function(){
-    return view('usuario.action');
-});
+Route::resource('usuarios', UserControlñler::class);
 
 
 
